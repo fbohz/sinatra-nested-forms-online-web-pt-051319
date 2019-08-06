@@ -16,7 +16,7 @@ module FormsLab
     post '/pirates' do 
       
       
-      erb :who
+      erb :show
     end 
     
 

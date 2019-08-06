@@ -14,8 +14,15 @@ module FormsLab
     
     post '/pirates' do 
       @pirate = Pirate.new(pirate['name'], pirate['weight'], pirate['height'])
-      Ship.clear
+      
+      pirate[ships].each do |details|
+       Ship.new(details)
+      end 
+      
+      @ships = Ship.all
+      
       erb :show
+      Ship.clear
     end 
     
 

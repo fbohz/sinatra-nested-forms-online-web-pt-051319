@@ -13,7 +13,7 @@ module FormsLab
     end
     
     post '/pirates' do 
-      
+      @pirate = Pirate.new()
       Ship.clear
       erb :show
     end 

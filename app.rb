@@ -15,7 +15,7 @@ module FormsLab
     
     post '/pirates' do 
       
-      
+      Ship.clear
       erb :show
     end 
     

@@ -15,7 +15,7 @@ module FormsLab
     post '/pirates' do 
       @pirate = Pirate.new(pirate['name'], pirate['weight'], pirate['height'])
       
-      pirate[ships].each do |details|
+      params[:pirate][:ships].each do |details|
        Ship.new(details)
       end 
       
